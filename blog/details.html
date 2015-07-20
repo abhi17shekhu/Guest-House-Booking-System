@@ -1,0 +1,96 @@
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>acss_base</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">ACSS<span class="logo_colour"></span></a></h1>
+          <h2>Administrative Computerization Support Services</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="/templates/blog/suggestion.html">Suggestion</a></li>
+          <li><a href="page.html">A Page</a></li>
+          <li><a href="another_page.html">Another Page</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+
+
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Categories</h3>
+            <ul>
+              <li><a href="#">Guest House</a></li>
+              <li><a href="#">link 2</a></li>
+              <li><a href="#">link 3</a></li>
+              <li><a href="#">link 4</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Sub-Menu</h3>
+            <ul>
+              <li><a href="/templates/blog/index.html">Home</a></li>
+              <li><a href="/templates/blog/booking.html">Booking</a></li>
+              <li><a href="/templates/blog/confirmed.html">Confirmed Bookings</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      </div>
+        <div class="main-content">
+            
+                   
+                  {% for details in details %}
+                    
+              <p> Booking Id :        {{ details.bookno }} </p>
+              <p> Guest Name :        {{ details.gname }} </p>
+              <p> Guest House Type :       {{ details.bookin }} </p>
+              <p> Booking Date and Time :       {{ details.booking_date }} </p>
+              <p> Department :        {{ details.dept }} </p>
+              <p> Number of Rooms :       {{ details.roomsno }} </p>
+              <p> Booking Status       {{ details.status }} </p>
+              <p> Telephone Number :        {{ details.tele_no }} </p>
+              <p> Address :      {{ details.address }}   </p>
+              
+                     
+                    
+                    {% endfor %}
+        </table>
+        </div>
+    </div>
+       
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="examples.html">Examples</a> | <a href="page.html">A Page</a> | <a href="another_page.html">Another Page</a> | <a href="contact.html">Contact Us</a></p>
+      <p>ACSS | Administrative Computerization Support Services </p>
+    </div>
+  </div>
+</body>
+</html>

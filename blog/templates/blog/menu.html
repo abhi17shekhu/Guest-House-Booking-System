@@ -1,0 +1,16 @@
+<div class="sidebar_item">
+            <h3>Sub-Menu</h3>
+            <ul>
+              <li><a href="/templates/blog/index.html">Home</a></li>
+              <li><a href="/templates/blog/booking.html">Booking</a></li>
+              {% for group in user.groups.all %}
+                {% if group.name == 'admin' %}
+              <li><a href="/templates/blog/confirmed.html">Confirmed Bookings</a></li>
+              <li><a href="/templates/blog/status.html">Status Check</a></li>
+              <li><a href="/templates/blog/conf_arrived.html">Arrivals</a></li>
+              <li><a href="/admin/blog/pend/">Edit Booking Data</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
